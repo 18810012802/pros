@@ -1,0 +1,28 @@
+package com.java.test;
+
+import java.io.UnsupportedEncodingException;
+
+public class IoTest {
+
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		// TODO Auto-generated method stub
+			String s="Ä½¿ÎABC";
+			byte[] bytes1=s.getBytes("utf-8");
+			for(byte b:bytes1){
+				System.out.print(Integer.toHexString(b&0xff)+" ");
+			}
+			System.out.println();
+			byte[] bytes2=s.getBytes("gbk");
+			for(byte b:bytes2){
+				System.out.print(Integer.toHexString(b & 0xff)+" ");
+			}
+			System.out.println();
+			byte[] bytes3=s.getBytes("utf-16be");
+			for(byte b:bytes3){
+				System.out.print(Integer.toHexString(b & 0xff)+" ");
+			}
+			String str1=new String(bytes3,"utf-16be");
+			System.out.println(str1);
+	}
+
+}

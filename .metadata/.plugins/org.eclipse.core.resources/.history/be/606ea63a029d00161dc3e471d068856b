@@ -1,0 +1,17 @@
+package cn.itcast.lucene;
+
+public class HelloWorld {
+
+	/**
+	 * ´´½¨Ë÷Òý
+	 */
+	public void createIndex(){
+		
+	}
+	/**
+	 * ËÑË÷
+	 */
+	public void search(){
+		
+	}
+}

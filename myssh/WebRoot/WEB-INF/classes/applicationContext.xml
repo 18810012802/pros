@@ -1,0 +1,116 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+<!-- 配置被代理的对象 -->
+<bean id="testService1" class="com.mql.aop.TestService">
+<property name="name" value="青云"/>
+</bean>
+
+<!-- 配置前置通知 -->
+<bean id="MyMethodBeforeAdvice" class="com.mql.aop.MyMethodBeforeAdvice">
+</bean>
+<!-- 定之前只通知切入点 -->
+<bean id="myMethodBeforeAdviceFilter" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+	<property  name="advice" ref="MyMethodBeforeAdvice"/>
+	<property name="mappedNames">
+	<list>
+		<value>sayHello</value>
+	</list>
+	</property>
+</bean>
+<!-- 配置后置通知 -->
+<bean id="MyAfterReturningAdvice" class="com.mql.aop.MyAfterReturningAdvice">
+</bean>
+
+<!-- 配置环绕通知 -->
+<bean id="MyMethodInterceptor" class="com.mql.aop.MyMethodInterceptor">
+</bean>
+<!-- 异常通知 -->
+<bean id="MyThrowsAdvice" class="com.mql.aop.MyThrowsAdvice">
+</bean>
+<!-- 配置代理对象 -->
+<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+<!-- 代理的接口集 -->
+<property name="proxyInterfaces">
+<list>
+	<value>com.mql.aop.TestServiceInter</value>
+	<value>com.mql.aop.TestServiceInter2</value>
+</list>
+</property>
+<!-- 把通知织入到代理对象 -->
+<property name="interceptorNames">
+<list>
+	<value>myMethodBeforeAdviceFilter</value>
+	<value>MyAfterReturningAdvice</value>
+	<value>MyMethodInterceptor</value>
+	<value>MyThrowsAdvice</value>
+</list>
+	
+</property>
+<!-- 配置被代理对象 -->
+<property name="target" ref="testService1"/>
+</bean>
+<context:annotation-config/>			
+<bean id="testService" class="com.mql.test.TestService">
+	<property name="name" value="test"/>
+</bean>	
+<!-- 配置数据源 -->
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+	    <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
+	    <property name="username" value="loss_admin"/>
+	    <property name="password" value="sg_loss"/>
+	     <!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="30"/>
+	 	<!-- 连接池的最大值 -->
+	 	<property name="maxActive" value="500"/> 
+ 		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+		<property name="maxIdle" value="2"/>
+		<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+		<property name="minIdle" value="1"/>
+</bean>	
+
+<!-- 配置会话工厂() -->
+<bean id="sessionFactory"  class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+     <!-- 设置数据源 -->
+     <property name="dataSource" ref="dataSource"/>
+     <!-- 接管了hibernate对象映射文件 -->
+     <property name="mappingResources">
+	    <list>
+	       <value>com/mql/domain/Employee.hbm.xml</value>
+	     <value>com/mql/domain/Department.hbm.xml</value> 
+	    </list>
+     </property>
+     <property name="hibernateProperties">
+	    <value>
+	        	hibernate.dialect=org.hibernate.dialect.OracleDialect
+	        	hibernate.hbm2ddl.auto=update
+				hibernate.show_sql=true
+				hibernate.cache.use_second_level_cache=true
+        	    hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
+        	    hibernate.generate_statistics=true	      
+	 </value>
+    </property>
+</bean>	
+
+<!-- <bean id="employeeService" class="com.mql.service.imp.EmployeeService">
+<property name="sessionFactory" ref="sessionFactory"/>
+</bean> -->
+<bean id="employeeService" class="com.mql.service.imp.EmployeeService"/>
+<bean id="departmentService" class="com.mql.service.imp.DepartmentService">
+</bean>
+<bean scope="prototype" name="/login" class="com.mql.web.action.LoginAction">
+<!-- <property name="employeeService" ref="employeeService"/> -->
+</bean>	
+<bean scope="prototype" name="/employee" class="com.mql.web.action.EmployeeAction"/>
+<!-- 配置事务管理器，统一管理sessionFactory的事务 -->
+<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+  	<property name="sessionFactory" ref="sessionFactory"/>
+</bean>
+<!-- 启用事务注解 -->
+<tx:annotation-driven transaction-manager="txManager"/>
+</beans>

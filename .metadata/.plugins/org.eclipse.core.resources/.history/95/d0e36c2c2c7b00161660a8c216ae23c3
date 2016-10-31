@@ -1,0 +1,35 @@
+package com.mql.action;
+
+import com.mql.po.User;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+public class LoginAction extends ActionSupport implements ModelDriven<User>{
+	private User user=new User();
+	public String login(){
+		
+			
+		System.out.println(user.getUsername()+":"+user.getPassword());
+		System.out.println(user.getBooklist().get(0).getUsername());
+		return SUCCESS;
+	}
+/*	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}*/
+	@Override
+	public User getModel() {
+		// TODO Auto-generated method stub
+		return user;
+	}
+	@Override
+	public void validate() {
+		// TODO Auto-generated method stub
+		if(user.getUsername()==null||"".equals(user.getUsername())){
+			this.addFieldError("username", "用户名不能为空");
+		}
+	}
+	
+}

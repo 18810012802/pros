@@ -1,0 +1,29 @@
+package com.hive.test;
+
+import java.util.List;
+
+import org.apache.hadoop.hive.service.HiveClient;
+import org.apache.hadoop.hive.service.HiveServerException;
+import org.apache.thrift.TException;
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TProtocol;
+import org.apache.thrift.transport.TSocket;
+
+public class HiveThriftClient {
+
+	public static void main(String[] args) throws HiveServerException, TException {
+		// TODO Auto-generated method stub
+		final TSocket tsocket=new TSocket("192.168.127.141",10000);
+		final TProtocol tProtcal =new TBinaryProtocol(tsocket);
+		final HiveClient client=new HiveClient(tProtcal);
+		tsocket.open();
+		client.execute("desc t1");
+		List<String> columns=client.fetchAll();
+		for(String col:columns){
+			System.out.println(col);
+		}
+		tsocket.close();
+		
+	}
+
+}

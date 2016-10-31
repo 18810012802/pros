@@ -1,0 +1,41 @@
+package cn.itcast.lucene;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriter.MaxFieldLength;
+import org.junit.Test;
+
+import cn.itcast.luceneUtils.File2DocumentUtils;
+
+public class HelloWorld {
+
+	String filePath="I:\\eclipse\\LusenceDemo\\datasource\\youth.txt";
+	String indexPath="I:\\eclipse\\LusenceDemo\\luseneIndex";
+	Analyzer analyzer=new StandardAnalyzer();
+	/**
+	 * ´´½¨Ë÷Òý
+	 * @throws IOException 
+	 * 
+	 */
+	@Test
+	public void createIndex() throws IOException{
+		File file=new File(filePath);
+		Document doc=File2DocumentUtils.file2Document(filePath);
+		
+		IndexWriter indexWriter=new IndexWriter(indexPath,analyzer,true,MaxFieldLength.LIMITED );
+		indexWriter.addDocument(doc);
+	
+		indexWriter.close();
+	}
+	/**
+	 * ËÑË÷
+	 */
+	public void search(){
+		
+	}
+}

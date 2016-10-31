@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+"-//Apache Struts//XWork Validator 1.0.3//EN" 
+"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd"> 
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入名字</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{4,25})]]></param>
+			<message>您输入的用户名只能是字母或数字，长度4-25之间</message>
+		</field-validator>
+	</field>
+
+	<field name="pass">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入密码</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{4-25})]]></param>
+			<message>您输入的密码只能是字母或数字，长度4-25之间</message>
+		</field-validator>
+	</field>
+	
+	
+</validators>

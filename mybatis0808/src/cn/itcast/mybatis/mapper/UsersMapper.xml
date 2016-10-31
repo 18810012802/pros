@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itcast.mybatis.mapper.UsersMapper">
+<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+	<sql id="query_user_where">
+			<if test="usersCustom!=null">
+				<if test="usersCustom.username!=null and usersCustom.username!=''">
+				and users.username like '%${usersCustom.username}%'
+				</if>
+				<if test="usersCustom.sex!=null and usersCustom.sex!=''">
+				and users.sex=#{usersCustom.sex} 
+				</if>
+			</if>
+			<if test="ids!=null">
+				<foreach collection="ids" item="id" open="and id in(" close=")" separator =",">
+				   #{id}
+				</foreach>
+			</if>
+	</sql>
+
+	<resultMap type="users" id="usersResultMap">
+		<id column="id_" property="id"/>
+		<result column="username_" property="username"/>
+	</resultMap>
+	
+	<select id="findUserByIdResultMap" parameterType="int" resultMap="usersResultMap" >
+		SELECT id id_,username username_ FROM USERS WHERE id=#{value}
+	</select>
+	<select id="findUserById" parameterType="int" resultType="cn.itcast.mybatis.po.Users" >
+		SELECT * FROM USERS WHERE id=#{value}
+	</select>
+	<select id="findUserByName" parameterType="java.lang.String" resultType="users" >
+		SELECT * FROM USERS WHERE username like '%${value}%'
+	</select>
+	<insert id="insertUser" parameterType="cn.itcast.mybatis.po.Users">
+		<selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">
+		 select seq_users.nextval from dual
+		</selectKey>
+		insert into users(id,username,birthday,sex,address) values(#{id},#{username},#{birthday},#{sex},#{address})
+	</insert>
+	
+	<delete id="deleteUser" parameterType="int">
+		delete from users where id=#{id}
+	</delete>
+	<update id="updateUser" parameterType="cn.itcast.mybatis.po.Users">
+		update users set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address} where id=#{id}
+	</update>
+	<select id="findUserList" parameterType="cn.itcast.mybatis.po.UsersQueryVo" resultType="usersCustom">
+		select users.* from users 
+		<where>
+			<include refid="query_user_where"></include>
+		</where>
+	</select>
+	<select id="findUserCount" parameterType="cn.itcast.mybatis.po.UsersQueryVo" resultType="int">
+		select count(*) from users where users.sex=#{usersCustom.sex} and users.username like '%${usersCustom.username}%'
+	</select>
+</mapper>

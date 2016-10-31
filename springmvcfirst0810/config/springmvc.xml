@@ -1,0 +1,50 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
+
+	<bean id="itemsController1" name="/queryItems.action" class="cn.itcast.ssm.controller.ItemsController1"/>
+	<bean id="itemsController2" name="/queryItems2.action" class="cn.itcast.ssm.controller.ItemsController2"/>
+	<!-- <bean class="cn.itcast.ssm.controller.ItemsController3"/> -->
+	<context:component-scan base-package="cn.itcast.ssm.controller"></context:component-scan>
+<!-- 处理器适配器 -->
+	<bean		
+	class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+	<bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>	
+
+<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+<!-- 处理器适映射器 -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/items1.action">itemsController1</prop>
+				<prop key="/items2.action">itemsController1</prop>
+				<prop key="/items3.action">itemsController2</prop>
+			</props>
+		</property>
+	</bean>
+<bean class=" org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+<!-- <mvc:annotation-driven></mvc:annotation-driven> -->
+
+<!-- 处理器解析器 -->
+	<!-- <bean class="org.spromgframework.web.servlet.view.InternalResourceViewResolver"/> -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/> 
+	</bean>
+	
+	
+
+</beans>

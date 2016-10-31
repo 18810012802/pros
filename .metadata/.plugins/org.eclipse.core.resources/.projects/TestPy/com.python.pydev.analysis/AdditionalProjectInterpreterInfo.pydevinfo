@@ -1,0 +1,43 @@
+-- VERSION_4
+-- START DISKCACHE_2
+I:\eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\TestPy\com.python.pydev.analysis\v2_indexcache
+com.__init__|1472874590000000000|I:\eclipse\TestPy\com\__init__.py
+com.imooc.__init__|1472915032000000000|I:\eclipse\TestPy\com\imooc\__init__.py
+hello|1472964748000000000|I:\eclipse\TestPy\hello.py
+com.imooc.mysql|1476332632000000000|I:\eclipse\TestPy\com\imooc\mysql.py
+-- END DISKCACHE
+-- START DICTIONARY
+5
+3=com.imooc.__init__
+5=TransferAccount.__init__
+2=hello
+4=TransferAccount
+1=com.imooc.mysql
+-- END DICTIONARY
+-- START TREE 1
+15
+con|1|conn!11@
+cur|1|cursor!11@
+f|2|f!19@f!27@
+fd|1|fd!27@
+ite|1|iter_f!27@
+l|1|l!27@
+lin|1|lines!27@
+ma|1|ma!19@
+n|1|n!27@
+pa|1|pa!19@
+rs|1|rs!11@
+sql|1|sql!11@
+str|2|str1!19@str1!27@
+tr_|1|tr_money!11@
+tra|1|TransferAccount!9@
+-- END TREE
+-- START TREE 2
+6
+__i|1|__init__!4&10@
+add|1|add_money!4&10@
+che|2|check_money_enough!4&10@check_account_existed!4&10@
+con|1|conn!5&11@
+red|1|reduce_money!4&10@
+tra|1|transfer!4&10@
+-- END TREE

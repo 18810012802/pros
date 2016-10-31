@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itcast.mybatis.mapper.OrdersMapperCustom">
+	<resultMap type="cn.itcast.mybatis.po.Orders" id="ordersUserResultMap">
+		<id column="id" property="id"/>
+		<result column="user_id" property="user_id"/>
+		<result column="numberr" property="numberr"/>
+		<result column="createtime" property="createtime"/>
+		<result column="note" property="note"/>
+		<association property="user" javaType="users">
+			<id column="user_id" property="id"/>
+			<result column="username" property="username"/>
+			<result column="sex" property="sex"/>
+			<result column="address" property="address"/>
+		
+		</association>
+	
+	</resultMap>
+	
+	<resultMap type="cn.itcast.mybatis.po.Orders" id="ordersAndOrderDetailResultMap" extends="ordersUserResultMap">
+		<collection property="orderdetail" ofType="cn.itcast.mybatis.po.Orderdetail">
+			<id column="orderdetail_id" property="id"/>
+			<result column="items_id" property="items_id"/>
+			<result column="orders_id" property="orders_id"/>
+			<result column="items_num" property="items_num"/>
+			
+		</collection>
+	</resultMap>
+	<resultMap type="cn.itcast.mybatis.po.Users" id="userAndItemsResultMap">
+		<id column="user_id" property="id"/>
+		<result column="username" property="username"/>
+		<result column="sex" property="sex"/>
+		<result column="address" property="address"/>
+		<collection property="orderslist" ofType="cn.itcast.mybatis.po.Orders">
+			<id column="id" property="id"/>
+			<result column="user_id" property="user_id"/>
+			<result column="numberr" property="numberr"/>
+			<result column="createtime" property="createtime"/>
+			<result column="note" property="note"/>	
+			<collection property="orderdetail" ofType="cn.itcast.mybatis.po.Orderdetail">
+				<id column="orderdetail_id" property="id"/>
+				<result column="items_id" property="items_id"/>
+				<result column="orders_id" property="orders_id"/>
+				<result column="items_num" property="items_num"/>
+				<association property="items" javaType="cn.itcast.mybatis.po.Items">
+					<id column="items_id" property="id"/>
+					<result column="items_name" property="name"/>
+					<result column="items_detail" property="detail"/>
+					<result column="items_price" property="price"/>
+				</association>
+			</collection>		
+		</collection>
+	</resultMap>
+
+	<select id="findOrdersUser"  resultType="cn.itcast.mybatis.po.OrdersCustom">
+	select orders.*,users.username,users.sex,users.address from orders,users where orders.user_id=users.id
+	
+	</select>
+	
+	<select id="findOrdersUserResultMap"  resultMap="ordersUserResultMap">
+	select orders.*,users.username,users.sex,users.address from orders,users where orders.user_id=users.id
+	
+	</select>
+	
+	<select id="findOrdersAndOrderdetailResultMap"  resultMap="ordersAndOrderDetailResultMap">
+   select orders.*,
+               users.username,
+               users.sex,
+               users.address,
+               orderdetail.id orderdetail_id,
+               orderdetail.items_id,
+               orderdetail.items_num,
+               orderdetail.orders_id
+          from orders, users, orderdetail
+         where orders.user_id = users.id
+           and orderdetail.orders_id = orders.id	
+	</select>
+	
+	<select id="findUserAndItemsResultMap"  resultMap="userAndItemsResultMap">
+        select orders.*,
+        	   users.id user_id,
+               users.username,
+               users.sex,
+               users.address,
+               orderdetail.id orderdetail_id,
+               orderdetail.items_id,
+               orderdetail.items_num,
+               orderdetail.orders_id,
+               items.name items_name,
+               items.detail items_detail,
+               items.price items_price
+          from orders, users, orderdetail,items
+         where orders.user_id = users.id
+           and orderdetail.orders_id = orders.id
+           and items.id=orderdetail.items_id	
+	</select>
+	<resultMap type="orders" id="ordersUserLazyLoadingResulotMap">
+		<id column="id" property="id"/>
+		<result column="user_id" property="user_id"/>
+		<result column="numberr" property="numberr"/>
+		<result column="createtime" property="createtime"/>
+		<result column="note" property="note"/>
+		<association property="user" javaType="users" select="cn.itcast.mybatis.mapper.UsersMapper.findUserById" column="user_id">
+			
+		
+		</association>	
+	</resultMap>
+	<select id="findOrdersUserLazyLoading" resultMap="ordersUserLazyLoadingResulotMap">
+		select * from orders
+	</select>
+</mapper>

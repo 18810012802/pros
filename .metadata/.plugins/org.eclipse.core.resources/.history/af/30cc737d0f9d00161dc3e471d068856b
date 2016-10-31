@@ -1,0 +1,81 @@
+package cn.itcast.lucene;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.IndexWriter.MaxFieldLength;
+import org.apache.lucene.queryParser.MultiFieldQueryParser;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.Filter;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
+import org.junit.Test;
+
+import cn.itcast.luceneUtils.File2DocumentUtils;
+
+public class HelloWorld {
+
+	String filePath = "I:\\eclipse\\LusenceDemo\\datasource\\youth.txt";
+	String indexPath = "I:\\eclipse\\LusenceDemo\\luseneIndex";
+	Analyzer analyzer = new StandardAnalyzer();
+
+	
+	/**
+	 * ´´½¨Ë÷Òý
+	 * 
+	 * @throws IOException
+	 * 
+	 */
+	@Test
+	public void createIndex() throws IOException {
+		File file = new File(filePath);
+		Document doc = File2DocumentUtils.file2Document(file);
+
+		IndexWriter indexWriter = new IndexWriter(indexPath, analyzer, true, MaxFieldLength.LIMITED);
+		indexWriter.addDocument(doc);
+
+		indexWriter.close();
+	}
+
+	/**
+	 * ËÑË÷
+	 * 
+	 * @throws IOException
+	 * @throws ParseException
+	 */
+	@Test
+	public void search() throws IOException, ParseException {
+		String queryString = "Youth";
+		String[] fields = { "name", "content" };
+
+		QueryParser queryParser = new MultiFieldQueryParser(fields, analyzer);
+		Query query = queryParser.parse(queryString);
+		IndexSearcher indexSearcher = new IndexSearcher(indexPath);
+		Filter filter = null;
+		
+		TopDocs topDocs=indexSearcher.search(query, filter, 10000);
+		System.out.println(topDocs.totalHits);
+		for(ScoreDoc scoreDoc:topDocs.scoreDocs){
+			int docSn=scoreDoc.doc;
+			Document doc=indexSearcher.doc(docSn);
+			File2DocumentUtils.printDocumentInfo(doc);
+		}
+	}
+	@Test
+	public void createIndex2() throws IOException {
+		File file = new File(filePath);
+		Document doc = File2DocumentUtils.file2Document(filePath);
+
+		IndexWriter indexWriter = new IndexWriter(indexPath, analyzer, true, MaxFieldLength.LIMITED);
+		indexWriter.addDocument(doc);
+
+		indexWriter.close();
+	}
+}

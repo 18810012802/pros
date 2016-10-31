@@ -1,0 +1,20 @@
+<classpath>
+  <container id="spring_transaction!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="I:/eclipse/spring_transaction/WebRoot/WEB-INF/lib/spring-jdbc-3.2.0.RELEASE.jar">
+      <source-attachment-path>I:/Springmvc+Mybatis由浅入深全套视频教程/springmvc/day01/res/jar包/spring3.2.0源码/spring-jdbc-3.2.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="I:/eclipse/spring_transaction/WebRoot/WEB-INF/lib/spring-tx-3.2.0.RELEASE.jar">
+      <source-attachment-path>I:/Springmvc+Mybatis由浅入深全套视频教程/springmvc/day01/res/jar包/spring3.2.0源码/spring-tx-3.2.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="springmvcfirst0810!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="I:/eclipse/springmvcfirst0810/WebRoot/WEB-INF/lib/spring-webmvc-3.2.0.RELEASE.jar">
+      <source-attachment-path>I:/Springmvc+Mybatis由浅入深全套视频教程/springmvc/day01/res/jar包/spring3.2.0源码/spring-webmvc-3.2.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="springmvc0810!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="I:/eclipse/springmvc0810/WebRoot/WEB-INF/lib/spring-webmvc-3.2.0.RELEASE.jar">
+      <source-attachment-path>I:/Springmvc+Mybatis由浅入深全套视频教程/springmvc/day01/res/jar包/springmvc独立运行/spring-webmvc-3.2.0.RELEASE.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>
