@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="-345,75" dimension="237,104" />
+  <StrutsActivity path="/updateBuilding.do" location="420,75" dimension="295,104" />
+  <StrutsActivity path="/queryByBuildingno.do" location="-330,405" dimension="316,104" />
+  <StrutsActivity path="/updateUser.do" location="435,405" dimension="275,104" />
+  <StrutsActivity path="/stu.do" location="-330,780" dimension="223,104" />
+  <StrutsActivity path="/inspect.do" location="-330,1230" dimension="247,104" />
+  <StrutsActivity path="/access.do" location="450,1200" dimension="244,104" />
+  <StrutsActivity path="/property1.do" location="-285,1695" dimension="262,104" />
+  <StrutsActivity path="/register.do" location="450,795" dimension="253,104" />
+  <StrutsActivity path="/repaire.do" location="1065,420" dimension="250,104" />
+  <StrutsActivity path="/news.do" location="1170,1215" dimension="237,104" />
+  <StrutsActivity path="/message.do" location="450,1665" dimension="258,104" />
+  <StrutsActivity path="/manager.jsp" location="-15,75" dimension="150,100" />
+  <StrutsActivity path="/student.jsp" location="-255,-45" dimension="150,100" />
+  <StrutsActivity path="/newPassword.jsp" location="-450,210" dimension="150,100" />
+  <StrutsActivity path="/loginUI.jsp" location="585,1530" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/err.jsp" location="-45,210" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/main.jsp" location="-240,210" dimension="150,100" />
+  <StrutsActivity path="/changePassword.jsp" location="-465,-75" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/login.jsp" location="-60,-45" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateBuildingInfo.jsp" location="285,-45" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/showDetailByBuildingno.jsp" location="-285,330" dimension="253,53" />
+  <StrutsActivity path="/WEB-INF/showDetail.jsp" location="120,405" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/myAccount.jsp" location="750,405" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/employee.jsp" location="300,255" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateUser.jsp" location="465,555" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/stuInfo.jsp" location="165,630" dimension="150,100" />
+  <StrutsActivity path="/m_updateStu.jsp" location="-420,1065" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateStu.jsp" location="-225,1065" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/step3.jsp" location="-240,900" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/step2.jsp" location="-225,630" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/downList.jsp" location="-30,1065" dimension="150,100" />
+  <StrutsActivity path="/m_student.jsp" location="-405,555" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateStep5.jsp" location="135,900" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/step5.jsp" location="135,795" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/step4.jsp" location="-45,900" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/step1.jsp" location="-30,630" dimension="150,100" />
+  <StrutsActivity path="/m_updateInspect.jsp" location="-630,1245" dimension="150,100" />
+  <StrutsActivity path="/m_grade.jsp" location="-465,1365" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/inspection.jsp" location="-225,1380" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateInspect.jsp" location="45,1230" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/accessByCardno.jsp" location="750,1185" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/access.jsp" location="540,1320" dimension="150,100" />
+  <StrutsActivity path="/m_access.jsp" location="495,1035" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/showImage.jsp" location="-90,1545" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/property.jsp" location="-285,1545" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateProperty.jsp" location="30,1680" dimension="150,100" />
+  <StrutsActivity path="/inspection1.jsp" location="765,795" dimension="150,100" />
+  <StrutsActivity path="/m_repaire.jsp" location="1200,285" dimension="150,100" />
+  <StrutsActivity path="/m_updateRepaire.jsp" location="1035,285" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateRepaire.jsp" location="1395,420" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/repaire.jsp" location="1080,555" dimension="150,100" />
+  <StrutsActivity path="/guide.jsp" location="1455,1140" dimension="150,100" />
+  <StrutsActivity path="/index.jsp" location="1020,1410" dimension="150,100" />
+  <StrutsActivity path="/root.jsp" location="990,1170" dimension="150,100" />
+  <StrutsActivity path="/notices.jsp" location="1500,1260" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/updateNews.jsp" location="1440,1410" dimension="150,100" />
+  <StrutsActivity path="/noticesByBase.jsp" location="1260,1410" dimension="150,100" />
+  <StrutsActivity path="/introduce.jsp" location="1335,1020" dimension="150,100" />
+  <StrutsActivity path="/message.jsp" location="750,1680" dimension="150,100" />
+  <StrutsActivity path="/structure.jsp" location="1155,1020" dimension="150,100" />
+  <StrutsActivity path="/grade.jsp" location="960,1020" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/notice.jsp" location="975,1290" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/message.jsp" location="630,1830" dimension="150,100" />
+  <StrutsActivity path="/messageList.jsp" location="375,1545" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/messageDetail.jsp" location="390,1830" dimension="150,100" />
+  <StrutsActivity path="/loginRecord.jsp" location="-285,2310" dimension="150,100" />
+  <StrutsActivity path="/loginRecord.do" location="-285,2190" dimension="279,104" />
+  <StrutsTransition id="/inspect.do,updateInspect,/WEB-INF/updateInspect.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-83,1280" />
+      <AbsolutePoint location="45,1280" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/property1.do,property1,/WEB-INF/property.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-210,1695" />
+      <AbsolutePoint location="-210,1645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/repaire.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1190,524" />
+      <AbsolutePoint location="1190,539" />
+      <AbsolutePoint location="1815,539" />
+      <AbsolutePoint location="1815,1550" />
+      <AbsolutePoint location="735,1550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/repaire.do,m_repaire,/m_repaire.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1275,420" />
+      <AbsolutePoint location="1275,385" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,m_updateStu,/m_updateStu.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-315,884" />
+      <AbsolutePoint location="-315,1065" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,student,/student.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-180,75" />
+      <AbsolutePoint location="-180,55" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,message,/message.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1258,1319" />
+      <AbsolutePoint location="1258,1730" />
+      <AbsolutePoint location="900,1730" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,stuInfo,/WEB-INF/stuInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-150,780" />
+      <AbsolutePoint location="-150,745" />
+      <AbsolutePoint location="240,745" />
+      <AbsolutePoint location="240,730" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryByBuildingno.do,ok,/WEB-INF/showDetailByBuildingno.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-158,405" />
+      <AbsolutePoint location="-158,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-330,862" />
+      <AbsolutePoint location="-645,862" />
+      <AbsolutePoint location="-645,1814" />
+      <AbsolutePoint location="723,1814" />
+      <AbsolutePoint location="723,1630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/inspect.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-240,1334" />
+      <AbsolutePoint location="-240,1495" />
+      <AbsolutePoint location="630,1495" />
+      <AbsolutePoint location="630,1530" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateUser.do,employee,/WEB-INF/employee.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,405" />
+      <AbsolutePoint location="567,305" />
+      <AbsolutePoint location="450,305" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,updateStu,/WEB-INF/updateStu.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-330,802" />
+      <AbsolutePoint location="-570,802" />
+      <AbsolutePoint location="-570,1215" />
+      <AbsolutePoint location="-150,1215" />
+      <AbsolutePoint location="-150,1165" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,loginRecord,/loginRecord.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-345,127" />
+      <AbsolutePoint location="-795,127" />
+      <AbsolutePoint location="-795,2360" />
+      <AbsolutePoint location="-285,2360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateBuilding.do,err,/WEB-INF/err.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,179" />
+      <AbsolutePoint location="567,240" />
+      <AbsolutePoint location="105,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/inspection1.jsp,null,/register.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="765,847" />
+      <AbsolutePoint location="703,847" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/property1.do,updateProperty,/WEB-INF/updateProperty.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-23,1730" />
+      <AbsolutePoint location="30,1730" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,step5,/WEB-INF/step5.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-107,802" />
+      <AbsolutePoint location="135,802" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,struc,/structure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1288,1215" />
+      <AbsolutePoint location="1288,1120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/inspect.do,inspect,/WEB-INF/inspection.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-150,1334" />
+      <AbsolutePoint location="-150,1380" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,manager,/manager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1348,1319" />
+      <AbsolutePoint location="1348,1335" />
+      <AbsolutePoint location="1425,1335" />
+      <AbsolutePoint location="1425,1875" />
+      <AbsolutePoint location="1905,1875" />
+      <AbsolutePoint location="1905,194" />
+      <AbsolutePoint location="60,194" />
+      <AbsolutePoint location="60,175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/repaire.do,m_updateRepaire,/m_updateRepaire.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1110,420" />
+      <AbsolutePoint location="1110,385" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,notices,/notices.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1407,1275" />
+      <AbsolutePoint location="1500,1275" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/property1.do,showImage,/WEB-INF/showImage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-38,1695" />
+      <AbsolutePoint location="-38,1645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/step1.jsp,null,/stu.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="45,630" />
+      <AbsolutePoint location="45,539" />
+      <AbsolutePoint location="-495,539" />
+      <AbsolutePoint location="-495,832" />
+      <AbsolutePoint location="-330,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/updateBuildingInfo.jsp,null,/updateBuilding.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="435,5" />
+      <AbsolutePoint location="567,5" />
+      <AbsolutePoint location="567,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,index,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,1319" />
+      <AbsolutePoint location="1198,1460" />
+      <AbsolutePoint location="1170,1460" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,intro,/introduce.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1392,1215" />
+      <AbsolutePoint location="1392,1120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/message.do,messageDetail,/WEB-INF/messageDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="465,1769" />
+      <AbsolutePoint location="465,1830" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/message.do,message,/message.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="708,1730" />
+      <AbsolutePoint location="750,1730" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,manager,/manager.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-108,125" />
+      <AbsolutePoint location="-15,125" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,notice,/WEB-INF/notice.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1170,1304" />
+      <AbsolutePoint location="1125,1304" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/access.do,accessByCardno,/WEB-INF/accessByCardno.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="694,1235" />
+      <AbsolutePoint location="750,1235" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1228,1319" />
+      <AbsolutePoint location="1228,1580" />
+      <AbsolutePoint location="735,1580" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginRecord.do,loginRecord,/loginRecord.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-210,2294" />
+      <AbsolutePoint location="-210,2310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,noticesByBase,/noticesByBase.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1288,1319" />
+      <AbsolutePoint location="1288,1410" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,step4,/WEB-INF/step4.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-107,832" />
+      <AbsolutePoint location="30,832" />
+      <AbsolutePoint location="30,900" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-270,75" />
+      <AbsolutePoint location="-270,-150" />
+      <AbsolutePoint location="1995,-150" />
+      <AbsolutePoint location="1995,1610" />
+      <AbsolutePoint location="735,1610" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,root,/root.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1170,1230" />
+      <AbsolutePoint location="1140,1230" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,m_student,/m_student.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-315,780" />
+      <AbsolutePoint location="-315,655" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/access.do,m_access,/m_access.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="570,1200" />
+      <AbsolutePoint location="570,1135" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-30,55" />
+      <AbsolutePoint location="-30,95" />
+      <AbsolutePoint location="-108,95" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,guide,/guide.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1407,1230" />
+      <AbsolutePoint location="1455,1230" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,ok,/WEB-INF/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-165,179" />
+      <AbsolutePoint location="-165,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/inspect.do,m_updateInspect,/m_updateInspect.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-330,1252" />
+      <AbsolutePoint location="-480,1252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,step2,/WEB-INF/step2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-210,780" />
+      <AbsolutePoint location="-210,730" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,changePassword,/changePassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-330,75" />
+      <AbsolutePoint location="-330,25" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,grade,/grade.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1230,1215" />
+      <AbsolutePoint location="1230,1155" />
+      <AbsolutePoint location="1035,1155" />
+      <AbsolutePoint location="1035,1120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/message.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="660,1665" />
+      <AbsolutePoint location="660,1630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/message.do,messageList,/messageList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="465,1665" />
+      <AbsolutePoint location="465,1645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,step3,/WEB-INF/step3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-165,884" />
+      <AbsolutePoint location="-165,900" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/repaire.do,repaire,/WEB-INF/repaire.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1155,524" />
+      <AbsolutePoint location="1155,555" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,err,/WEB-INF/err.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-108,155" />
+      <AbsolutePoint location="-30,155" />
+      <AbsolutePoint location="-30,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateUser.do,ok,/WEB-INF/myAccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="710,455" />
+      <AbsolutePoint location="750,455" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,downList,/WEB-INF/downList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-107,862" />
+      <AbsolutePoint location="-60,862" />
+      <AbsolutePoint location="-60,1115" />
+      <AbsolutePoint location="-30,1115" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateUser.do,updateUser,/WEB-INF/updateUser.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="540,509" />
+      <AbsolutePoint location="540,555" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/myAccount.jsp,null,/updateUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="750,485" />
+      <AbsolutePoint location="710,485" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/repaire.do,updateRepaire,/WEB-INF/updateRepaire.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1315,470" />
+      <AbsolutePoint location="1395,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateBuilding.do,ok,/WEB-INF/updateBuildingInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="420,127" />
+      <AbsolutePoint location="360,127" />
+      <AbsolutePoint location="360,55" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,m_grade,/m_grade.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1318,1319" />
+      <AbsolutePoint location="1318,1375" />
+      <AbsolutePoint location="1725,1375" />
+      <AbsolutePoint location="1725,2084" />
+      <AbsolutePoint location="-720,2084" />
+      <AbsolutePoint location="-720,1415" />
+      <AbsolutePoint location="-465,1415" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/message.do,message2,/WEB-INF/message.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="693,1769" />
+      <AbsolutePoint location="693,1830" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/inspect.do,m_grade,/m_grade.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-330,1282" />
+      <AbsolutePoint location="-361,1282" />
+      <AbsolutePoint location="-361,1365" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginRecord.do,loginUI,/loginUI.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-6,2242" />
+      <AbsolutePoint location="240,2242" />
+      <AbsolutePoint location="240,1435" />
+      <AbsolutePoint location="660,1435" />
+      <AbsolutePoint location="660,1530" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,updateNews,/WEB-INF/updateNews.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1407,1305" />
+      <AbsolutePoint location="1485,1305" />
+      <AbsolutePoint location="1485,1410" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/showDetail.jsp,null,/queryByBuildingno.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="120,457" />
+      <AbsolutePoint location="-14,457" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/access.do,access,/WEB-INF/access.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="615,1304" />
+      <AbsolutePoint location="615,1320" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,newPassword,/newPassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-255,179" />
+      <AbsolutePoint location="-255,260" />
+      <AbsolutePoint location="-300,260" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/stu.do,updateStep5,/WEB-INF/updateStep5.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-255,884" />
+      <AbsolutePoint location="-255,1035" />
+      <AbsolutePoint location="210,1035" />
+      <AbsolutePoint location="210,1000" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

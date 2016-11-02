@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="userForm" type="com.qdu.struts.form.UserForm" />
+    <form-bean name="buildingForm" type="com.qdu.struts.form.BuildingForm" />
+    <form-bean name="stuForm" type="com.qdu.struts.form.StuForm" />
+    <form-bean name="inspectForm" type="com.qdu.struts.form.InspectForm" />
+    <form-bean name="accessForm" type="com.qdu.struts.form.AccessForm" />
+    <form-bean name="accessToRecordForm" type="com.qdu.struts.form.AccessToRecordForm" />
+    <form-bean name="propertyForm" type="com.qdu.struts.form.PropertyForm" />
+    <form-bean name="uForm" type="com.qdu.struts.form.UForm" />
+    <form-bean name="repaireForm" type="com.qdu.struts.form.RepaireForm" />
+    <form-bean name="newsForm" type="com.qdu.struts.form.NewsForm" />
+    <form-bean name="messageForm" type="com.qdu.struts.form.MessageForm" />
+    <form-bean name="loginRecordForm" type="com.qdu.struts.form.LoginRecordForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="userForm"
+      input="/WEB-INF/login.jsp"
+      name="userForm"
+      path="/login"
+      scope="request"
+      type="com.qdu.struts.action.LoginAction"
+      validate="false"
+      cancellable="true" >
+      
+      <forward name="err" path="/WEB-INF/err.jsp" />
+      <forward name="ok" path="/WEB-INF/main.jsp" />
+      <forward name="manager" path="/manager.jsp" />
+      
+      
+      <forward name="student" path="/student.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+      <forward name="changePassword" path="/changePassword.jsp" />
+      <forward name="newPassword" path="/newPassword.jsp" />
+      <forward name="loginRecord" path="/loginRecord.jsp" />
+      
+    </action>
+    <action
+      attribute="buildingForm"
+      input="/WEB-INF/updateBuildingInfo.jsp"
+      name="buildingForm"
+      path="/updateBuilding"
+      scope="request"
+      type="com.qdu.struts.action.UpdateBuildingAction"
+      validate="false"
+      cancellable="true">
+      <forward name="err" path="/WEB-INF/err.jsp"/>
+      <forward name="ok" path="/WEB-INF/updateBuildingInfo.jsp"/>
+    </action>
+    <action
+      attribute="buildingForm"
+      input="/WEB-INF/showDetail.jsp"
+      name="buildingForm"
+      path="/queryByBuildingno"
+      scope="request"
+      type="com.qdu.struts.action.QueryByBuildingnoAction"
+      validate="false"
+      cancellable="true">
+    
+ <forward name="ok" path="/WEB-INF/showDetailByBuildingno.jsp"/>
+</action>
+    <action
+      attribute="userForm"
+      input="/WEB-INF/myAccount.jsp"
+      name="userForm"
+      path="/updateUser"
+      scope="request"
+      type="com.qdu.struts.action.UpdateUserAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="ok" path="/WEB-INF/myAccount.jsp" />
+      <forward name="updateUser" path="/WEB-INF/updateUser.jsp" />
+      <forward name="employee" path="/WEB-INF/employee.jsp" />
+    </action>
+    <action
+      attribute="stuForm"
+      input="/WEB-INF/step1.jsp"
+      name="stuForm"
+      path="/stu"
+      scope="request"
+      type="com.qdu.struts.action.StuAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="step2" path="/WEB-INF/step2.jsp" />
+      <forward name="step3" path="/WEB-INF/step3.jsp" />
+      <forward name="step4" path="/WEB-INF/step4.jsp" />
+      <forward name="step5" path="/WEB-INF/step5.jsp" />
+      <forward name="updateStep5" path="/WEB-INF/updateStep5.jsp" />
+      <forward name="stuInfo" path="/WEB-INF/stuInfo.jsp" />
+      <forward name="updateStu" path="/WEB-INF/updateStu.jsp" />
+      <forward name="downList" path="/WEB-INF/downList.jsp" />
+      <forward name="m_student" path="/m_student.jsp" />
+      <forward name="m_updateStu" path="/m_updateStu.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+    </action>
+    <action
+      attribute="inspectForm"
+      name="inspectForm"
+      path="/inspect"
+      scope="request"
+      type="com.qdu.struts.action.InspectAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="inspect" path="/WEB-INF/inspection.jsp" />
+      <forward name="updateInspect" path="/WEB-INF/updateInspect.jsp" />
+      <forward name="m_grade" path="/m_grade.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+      <forward name="m_updateInspect" path="/m_updateInspect.jsp" />
+    </action>
+    <action
+      attribute="accessToRecordForm"
+      name="accessToRecordForm"
+      path="/access"
+      scope="request"
+      type="com.qdu.struts.action.AccessAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="access" path="/WEB-INF/access.jsp" />
+      <forward name="accessByCardno" path="/WEB-INF/accessByCardno.jsp" />
+      <forward name="m_access" path="/m_access.jsp" />
+    </action>
+    <action
+      attribute="propertyForm"
+      name="propertyForm"
+      path="/property1"
+      scope="request"
+      type="com.qdu.struts.action.Property1Action"
+      validate="false"
+      cancellable="true" >
+      <forward name="property1" path="/WEB-INF/property.jsp" />
+      <forward name="updateProperty" path="/WEB-INF/updateProperty.jsp" />
+      <forward name="showImage" path="/WEB-INF/showImage.jsp" />
+    </action>
+    <action
+      attribute="uForm"
+      input="/inspection1.jsp"
+      name="uForm"
+      path="/register"
+      scope="request"
+      type="com.qdu.struts.action.RegisterAction"
+      validate="false"
+      cancellable="true" />
+    <action
+      attribute="repaireForm"
+      name="repaireForm"
+      path="/repaire"
+      scope="request"
+      type="com.qdu.struts.action.RepaireAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="repaire" path="/WEB-INF/repaire.jsp" />
+      <forward name="updateRepaire" path="/WEB-INF/updateRepaire.jsp" />
+      <forward name="m_repaire" path="/m_repaire.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+      <forward name="m_updateRepaire" path="/m_updateRepaire.jsp" />
+    </action>
+    <action
+      attribute="newsForm"
+      name="newsForm"
+      path="/news"
+      scope="request"
+      type="com.qdu.struts.action.NewsAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="root" path="/root.jsp" />
+      <forward name="message" path="/message.jsp" />
+      <forward name="manager" path="/manager.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+      <forward name="index" path="/index.jsp" />
+      <forward name="guide" path="/guide.jsp" />
+      <forward name="intro" path="/introduce.jsp" />
+      <forward name="struc" path="/structure.jsp" />
+      <forward name="grade" path="/grade.jsp" />
+      <forward name="notice" path="/WEB-INF/notice.jsp" />
+      <forward name="updateNews" path="/WEB-INF/updateNews.jsp" />
+      <forward name="notices" path="/notices.jsp" />
+      <forward name="noticesByBase" path="/noticesByBase.jsp" />
+      <forward name="m_grade" path="/m_grade.jsp" />
+    </action>
+    <action
+      attribute="messageForm"
+      name="messageForm"
+      path="/message"
+      scope="request"
+      type="com.qdu.struts.action.MessageAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="message" path="/message.jsp" />
+      <forward name="messageList" path="/messageList.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+      <forward name="message2" path="/WEB-INF/message.jsp" />
+      <forward name="messageDetail" path="/WEB-INF/messageDetail.jsp" />
+    </action>
+    <action
+      attribute="loginRecordForm"
+      name="loginRecordForm"
+      path="/loginRecord"
+      scope="request"
+      type="com.qdu.struts.action.LoginRecordAction"
+      validate="false"
+      cancellable="true" >
+      <forward name="loginRecord" path="/loginRecord.jsp" />
+      <forward name="loginUI" path="/loginUI.jsp" />
+    </action>
+
+
+
+
+
+    
+
+
+
+
+
+  </action-mappings>
+
+  <message-resources parameter="com.qdu.struts.ApplicationResources" />
+</struts-config>
+

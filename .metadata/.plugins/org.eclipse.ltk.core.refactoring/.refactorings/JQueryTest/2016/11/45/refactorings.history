@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;jquery-1.9.1.js&apos; to &apos;js&apos;" description="Move &apos;jquery-1.9.1.js&apos; to &apos;js&apos;" destination="WebContent/js" element1="/myssh/WebRoot/js/jquery-1.9.1.js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1478005493953" updateReferences="true"/>
+</session>
