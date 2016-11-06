@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="HelloWorld" project="LusenceDemo" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="cn.itcast.lucene.HelloWorld" time="0.416">
-    <testcase name="search" classname="cn.itcast.lucene.HelloWorld" time="0.053"/>
-    <testcase name="createIndex" classname="cn.itcast.lucene.HelloWorld" time="0.363"/>
-  </testsuite>
-</testrun>

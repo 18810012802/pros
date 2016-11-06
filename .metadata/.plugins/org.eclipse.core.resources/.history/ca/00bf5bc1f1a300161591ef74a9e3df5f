@@ -1,0 +1,10 @@
+$(function(){
+	$('#box').linkbutton({
+		//id:'pox',
+		toggle:
+	});
+	$('#pox').linkbutton({
+		//id:'pox',
+		toggle:
+	});
+});

@@ -1,0 +1,11 @@
+$(function(){
+	$('#box').progressbar({
+		width:400,
+		height:30,
+		value:30,
+		text:'{value}%',
+		onChange:function(newValue,oldValue){
+			cpnsole.log("新："+newValue+',旧：'+oldValue);
+		},
+	});
+});

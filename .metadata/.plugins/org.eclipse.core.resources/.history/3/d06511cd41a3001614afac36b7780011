@@ -1,0 +1,14 @@
+$(function(){
+	$('#box').draggable({
+		revert:true,
+		cursor:'text',
+		//handle:'#pox',
+		//disabled:true,
+		edge:10,
+		axis:'v',
+		proxy:'clone',
+		deltax:0,
+		de;tay:0,
+			
+	});
+})

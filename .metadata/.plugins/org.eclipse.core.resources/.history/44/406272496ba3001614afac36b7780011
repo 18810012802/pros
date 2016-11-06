@@ -1,0 +1,14 @@
+$(function(){
+	$('#tooltip').tooltip({
+		content:"这是内容提示框",
+		position:'top',
+		trackMouse:true,
+		deltaX:10,
+		showEvent:'click',
+		hideEvent:'dbclick',
+		showDelay:500,
+		hideDelay:1000,
+		
+		
+	});
+})

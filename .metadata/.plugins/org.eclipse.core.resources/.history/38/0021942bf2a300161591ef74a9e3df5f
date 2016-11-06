@@ -1,0 +1,14 @@
+$(function(){
+	$('#box').linkbutton({
+		//id:'pox',
+		toggle:true,
+		group:'sex',
+		plain:true,
+		
+	});
+	$('#pox').linkbutton({
+		//id:'pox',
+		toggle:true,
+		group:'sex',
+	});
+});

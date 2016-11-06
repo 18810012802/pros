@@ -1,0 +1,7 @@
+$(function(){
+	$('#tooltip').resizable({
+		content:"这是内容提示框",
+		
+		
+	});
+})

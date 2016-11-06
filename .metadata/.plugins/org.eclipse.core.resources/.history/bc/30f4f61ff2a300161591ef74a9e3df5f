@@ -1,0 +1,12 @@
+$(function(){
+	$('#box').linkbutton({
+		//id:'pox',
+		toggle:true,
+		group:'sex',
+	});
+	$('#pox').linkbutton({
+		//id:'pox',
+		toggle:true,
+		group:'sex',
+	});
+});

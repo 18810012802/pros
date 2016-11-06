@@ -1,9 +1,0 @@
-package cn.itcast.luceneUtils;
-
-import org.apache.lucene.document.Document;
-
-public class File2DocumentUtils {
-	public static Document file2Document(String path){
-		
-	}
-}
