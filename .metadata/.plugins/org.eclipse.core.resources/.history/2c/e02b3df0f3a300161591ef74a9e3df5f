@@ -1,8 +1,0 @@
-$(function(){
-	$('#box').progressbar({
-		width:400,
-		height:30,
-		value:30,
-		text:'{value}%',
-	});
-});

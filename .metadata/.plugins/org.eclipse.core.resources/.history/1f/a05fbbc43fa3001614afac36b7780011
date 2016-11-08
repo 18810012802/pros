@@ -1,5 +1,0 @@
-$(function(){
-	$('#box').draggable({
-		reverse:true
-	});
-})

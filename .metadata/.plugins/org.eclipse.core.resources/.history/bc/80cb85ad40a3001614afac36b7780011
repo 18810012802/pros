@@ -1,7 +1,0 @@
-$(function(){
-	$('#box').draggable({
-		revert:true,
-		cursor:'text',
-		handler:'#pox',
-	});
-})

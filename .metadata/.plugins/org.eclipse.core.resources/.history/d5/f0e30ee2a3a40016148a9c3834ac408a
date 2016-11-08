@@ -1,0 +1,42 @@
+$(function(){
+	$('#box').tabs({
+		width:300,
+		height:300,
+		//plain:true,
+		//fit :true,
+		//border:false,
+		tabWidth:100,
+		scrollIncrement:100,
+		scrollDuration:400,
+		tabHeight:20,
+		tools:[{
+			iconCls:'icon-add',
+			handler:function(){
+				alert('add');
+			},
+		}],
+		toolsPosition:'left',
+		tabPosition:'right',
+		headerWidth:300,
+		selected:1,
+		closable:true,
+		//showHeader:false,
+		onSelect:function(title,index){
+			alert(title+"  "+index);
+		},
+		onUnselect:function(title,index){
+			
+		},
+		onBeforeClose:function(){
+			
+		},
+		onClose:function(){
+			
+		},
+		onContextMenu:function(e,title,index){
+			alert(e.type);
+		}
+		
+		
+	});
+});

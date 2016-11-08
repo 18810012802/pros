@@ -1,0 +1,15 @@
+$(function(){
+	$(document).on('contextmenu',function(e){
+		e.preventDefault();
+		//$('#box').menu('hide');
+		$('#box').menu('show',{
+			left:e.pageX,
+			top:e.pageY,
+		});
+		//$('#box').menu('destroy');
+		console.log($('#box').menu('getItem','#new').id);
+		
+	});
+	
+	
+});

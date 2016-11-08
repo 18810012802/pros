@@ -1,0 +1,13 @@
+$(function(){
+	$('#box').tabs({
+		width:300,
+		height:100,
+		//plain:true,
+		//fit :true,
+		//border:false,
+		tabWidth:100,
+		scrollIncrement:100,
+		scrollDuration:400,
+		
+	});
+});

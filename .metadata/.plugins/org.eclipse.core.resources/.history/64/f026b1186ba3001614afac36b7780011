@@ -1,7 +1,0 @@
-$(function(){
-	$('#tooltip').tooltip({
-		content:"这是内容提示框",
-		
-		
-	});
-})
