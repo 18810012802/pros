@@ -1,0 +1,7 @@
+$(function(){
+	$('#ss').combo({
+		required:true,
+		
+	});
+	$('#food').appendTo($('#ss').combo('panel'));
+});

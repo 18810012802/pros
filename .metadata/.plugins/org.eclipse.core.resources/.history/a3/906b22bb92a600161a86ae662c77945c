@@ -1,0 +1,15 @@
+$(function(){
+	$('#ss').combo({
+		required:true,
+		
+	});
+	$('#food').appendTo($('#ss').combo('panel'));
+	$('#food input').click(function(){
+		var v=$(this).val();
+		var s=$(this).next('span').text();
+		$('#box').combo('setValue','v1'),
+		alert(v+s);
+		
+	});
+
+});

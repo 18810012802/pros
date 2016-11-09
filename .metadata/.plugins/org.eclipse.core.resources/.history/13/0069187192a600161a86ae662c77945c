@@ -1,0 +1,11 @@
+$(function(){
+	$('#ss').combo({
+		required:true,
+		
+	});
+	$('#food').appendTo($('#ss').combo('panel'));
+	$('#food input').click(function(){
+		
+	});
+
+});
