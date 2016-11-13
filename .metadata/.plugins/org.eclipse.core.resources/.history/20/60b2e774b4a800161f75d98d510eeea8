@@ -1,0 +1,20 @@
+package cn.it.ws;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.GetMethod;
+
+public class PhoneClient {
+/**
+ * HttpClient
+ * @param args
+ */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HttpClient client=new HttpClient();
+		GetMethod get=new GetMethod("http://ws.webxml.com.cn"+
+				"/WebServices/MobileCodeWS.asmx/getMobileCodeInfo?mobileCode=18810012802&userID=");
+		//PostMethod post=new PostMethod(uri);
+		client.executeMethod(get);
+	}
+
+}

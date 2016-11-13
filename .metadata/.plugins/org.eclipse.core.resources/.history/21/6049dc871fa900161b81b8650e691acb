@@ -1,0 +1,20 @@
+package cn.it.my2;
+
+public class _Main {
+/**
+ * ÌìÆøÔ¤±¨
+ * @param args
+ */
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WeatherWS ws=new WeatherWS();
+		WeatherWSSoap wsSoap=ws.getWeatherWSSoap();
+		ArrayOfString regionProvince=wsSoap.getRegionProvince();
+		for(String temp:regionProvince.getString()){
+			System.out.println(temp);
+		}
+		
+	}
+
+}

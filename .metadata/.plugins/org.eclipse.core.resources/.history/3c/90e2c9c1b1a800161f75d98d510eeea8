@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WebServiceTest">
+        <property name="context-root" value="WebServiceTest"/>
+        <property name="java-output-path" value="/WebServiceTest/webRoot/classes"/>
+    </wb-module>
+</project-modules>

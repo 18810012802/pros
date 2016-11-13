@@ -1,0 +1,13 @@
+package cn.it.ser;
+
+public class MyWebService {
+	
+	public String sayHello(String name){
+		return name+",ÄãºÃ";
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+$(function(){
+	$('#box').calendar({
+		width:300,
+		
+	});
+	
+
+});

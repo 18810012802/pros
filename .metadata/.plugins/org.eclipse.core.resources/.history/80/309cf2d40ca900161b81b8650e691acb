@@ -1,0 +1,33 @@
+package cn.it.ser;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
+@WebService
+(
+	name="MyWebService1",
+	serviceName="MyWebServiceService1",
+	portName="MyWebServicePort1",
+	targetNamespace="ser.it.cn"
+)
+public class MyWebService {
+	/**
+	 * @WebService
+	 * @param name
+	 * @return
+	 */
+	@WebMethod(exclude=true)
+	public String sayHello(String name){
+		return name+",你好";
+	}
+	public String sayHello2(@WebParam(name="name1")String name,int age){
+		return name+",你好,年龄为："+age;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Endpoint.publish("http://114.248.99.67:6666/ws", new MyWebService());
+		System.out.println("?WSDL");
+	}
+
+}

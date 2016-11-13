@@ -1,0 +1,22 @@
+package cn.it.ser;
+
+import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
+@WebService//默认静态无效
+public class MyWebService {
+	/**
+	 * @WebService
+	 * @param name
+	 * @return
+	 */
+	
+	public String sayHello(String name){
+		return name+",你好";
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Endpoint.publish("http://114.248.80.234:6666/ws", new MyWebService());
+		System.out.println("?WSDL");
+	}
+
+}

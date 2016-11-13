@@ -1,0 +1,11 @@
+$(function(){
+	$('#box').calendar({
+		width:300,
+		border:false,
+		firstDay:1,
+		weeks:['s','M','T','W','T','F','S'],
+		
+	});
+	
+
+});

@@ -1,0 +1,24 @@
+$(function(){
+	$.ajax({
+		type: "post",//使用get方法访问后台
+		dataType: "xml",//返回json格式的数据
+		url: "http://114.248.80.234:6666/ws",//要访问的后台地址
+		data: '<?xml version="1.0" encoding="utf-8"?>'+
+				'<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" '+
+				'xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">'+
+				 ' <soap:Body>'+
+				    '<getMobileCodeInfo xmlns="http://WebXml.com.cn/">'+
+				     ' <mobileCode>string</mobileCode>'+
+				      '<userID>string</userID>'+
+				    '</getMobileCodeInfo>'+
+				  '</soap:Body>'+
+				'</soap:Envelope>',//要发送的数据
+		contentType:"text/xml;charset=utf-8",
+		complete :function(){
+			//$("#load").hide();
+		},//AJAX请求完成时隐藏loading提示
+		success: function(msg){//msg为返回的数据，在这里做数据绑定
+			
+		}
+	});
+});
