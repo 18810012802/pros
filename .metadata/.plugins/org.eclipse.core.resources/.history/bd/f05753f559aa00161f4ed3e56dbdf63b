@@ -1,0 +1,16 @@
+package cn.it.cxf.spring;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.jws.WebService;
+@WebService
+public class StudentServiceImpl {
+	private List<Student> stuList=new ArrayList<Student>();
+	public void save(Student student){
+		stuList.add(student);
+	}
+	public List<Student> query(){
+		return stuList;
+	}
+}

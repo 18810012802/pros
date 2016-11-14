@@ -33,7 +33,7 @@ public class MyWebService {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Endpoint.publish("http://114.248.99.67:6666/ws", new MyWebService());
+		Endpoint.publish("http://114.248.108.175:6666/ws", new MyWebService());
 		System.out.println("?WSDL");
 	}
 

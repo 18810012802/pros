@@ -4,3 +4,7 @@
 1479002843669	Rename resource 'WebRoot'
 1479004742581	Move 'web.xml' to 'WEB-INF'
 1479004847646	Delete element
+1479115330488	Copy compilation unit
+1479134929788	Delete element
+1479134963094	Copy compilation unit
+1479135239165	Rename resource 'index2.jsp'

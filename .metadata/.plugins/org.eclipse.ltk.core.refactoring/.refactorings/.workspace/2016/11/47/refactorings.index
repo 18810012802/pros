@@ -6,3 +6,7 @@
 1479004269957	Delete resource 'WebServiceTest/webRoot/web.xml'
 1479004466100	Delete resource 'WebServiceTest/WebContent/WEB-INF/web.xml'
 1479004803393	Delete resource 'testWeb'
+1479106427677	Delete resource 'WebServiceTest/WebContent/WEB-INF/lib/json/commons-collections-3.2.jar'
+1479106538175	Delete resource 'WebServiceTest/WebContent/WEB-INF/lib/json/json-lib-2.3-jdk13.jar'
+1479106541921	Delete resource 'WebServiceTest/WebContent/WEB-INF/lib/json/json-lib-2.2.3-jdk15.jar'
+1479106639737	Delete 7 resources

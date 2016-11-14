@@ -1,0 +1,16 @@
+package cn.it.cxf;
+
+public class _Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentServicWS ws=new StudentServicWS();
+		StudentService wsSoap=ws.getStudentServicePort();
+		Student s=new Student();
+		s.setAge(10);
+		s.setName("ss");
+		s.setId(3);
+		wsSoap.save(s);
+	}
+
+}

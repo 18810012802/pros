@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>天气预报</title>
+</head>
+
+<body>
+省：<select id="province">
+	<option value="0">请选择</option>
+	
+</select>
+城市：<select id="city">
+	<option value="0">请选择</option>
+</select>
+</html>

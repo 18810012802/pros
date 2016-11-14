@@ -1,0 +1,10 @@
+package cn.it.cxf;
+
+public class CXFService {
+	public String sayHello(String name){
+		return name+",ÄãºÃ";
+	}
+	public static void main(String[] args) {
+		String address="http:"
+	}
+}

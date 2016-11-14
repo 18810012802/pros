@@ -1,0 +1,13 @@
+package cn.it.cxf;
+
+public class _Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CXFWebServiceService1 ws=new CXFWebServiceService1();
+		CXFWebService1 wsSoap=ws.getCXFWebServicePort1();
+		String address=wsSoap.sayHello("john");
+		System.out.println(address);
+	}
+
+}

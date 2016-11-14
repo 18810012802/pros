@@ -42,17 +42,28 @@ public class WeatherServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String id=request.getParameter("id");
+		response.setContentType("text/html;charset=utf-8");
+		response. setCharacterEncoding("UTF-8");
+		String type=request.getParameter("type");
 		WeatherWS ws=new WeatherWS();
 		WeatherWSSoap wsSoap=ws.getWeatherWSSoap();
-	
-		ArrayOfString weatherInfo=wsSoap.getWeather(id, "");
-		for(String temp:weatherInfo.getString()){
-			System.out.println(temp);
+		List<String> info=null;
+		if("province".equals(type)){
+			ArrayOfString regionProvince=wsSoap.getRegionProvince();
+			info=regionProvince.getString();
 		}
-		JSONArray jsonarray=JSONArray.fromObject((List<String>)weatherInfo.getString());
+		else if("city".equals(type)){
+			String id=request.getParameter("id");
+			ArrayOfString cityInfo=wsSoap.getSupportCityString(id);
+			info=cityInfo.getString();
+		}
+		else if("weather".equals(type)){
+			String id=request.getParameter("id");
+			ArrayOfString weatherInfo=wsSoap.getWeather(id, "");
+			info=weatherInfo.getString();
+		}
+		JSONArray jsonarray=JSONArray.fromObject(info);
 		response.getWriter().write(jsonarray.toString());
-		
 	}
 
 }

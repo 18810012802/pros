@@ -1,0 +1,37 @@
+$(function(){
+	var pro=new Array();
+	$.post("WeatherServlet.do",{'type':'province'},function(result){
+		pro=result;
+		alert(pro.length);
+	},"json");
+	alert(pro.length)
+	for(var i=0;i<pro.length;i++){
+		var p=pro[i];
+		debugger;
+		var data=pro[i].split(",");
+		$("#province").append("<option value="+data[1]+">"+data[0]+"</option>);")
+	}
+	var cities=new Array();
+	//cities['31123']=['1077,汶川','1451,广元'];
+	//cities['31124']=['2349,从化','2350,广州'];
+	$("#province").change(function(){
+		var val=$(this).val();
+		if(val!='0'){
+			$.post("WeatherServlet.do",{'type':'city','id':val},function(result){
+				cities[val]=result;
+			},"json");			
+			for(var i=0;i<cities[val].length;i++){
+				var data=cities[val][i].split(",");
+				$("#city").append("<option value="+data[1]+">"+data[0]+"</option>");
+			}
+		}
+	});
+	$("#city").change(function(){
+		var val=$(this).val();
+		if(val!='0'){
+			$.post("WeatherServlet.do",{'id':val},function(result){
+				alert(result[10]);
+			},"json");			
+		}
+	});
+});

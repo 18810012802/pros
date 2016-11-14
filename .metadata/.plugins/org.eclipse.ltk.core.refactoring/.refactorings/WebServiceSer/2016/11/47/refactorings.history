@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CXFSer.java&apos; to &apos;WebServiceTest/src/cn.it.cxf&apos;&#x0D;&#x0A;- Original project: &apos;WebServiceSer&apos;&#x0D;&#x0A;- Destination element: &apos;WebServiceTest/src/cn.it.cxf&apos;&#x0D;&#x0A;- Original element: &apos;cn.it.cxf.spring.CXFSer.java&apos;" description="Copy compilation unit" destination="=WebServiceTest/src&lt;cn.it.cxf" element1="/src&lt;cn.it.cxf.spring{CXFSer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1479135655815" units="1" version="1.0"/>
+</session>

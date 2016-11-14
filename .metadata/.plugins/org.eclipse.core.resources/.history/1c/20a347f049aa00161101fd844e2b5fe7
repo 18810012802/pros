@@ -1,0 +1,17 @@
+package cn.it.cxf;
+
+import org.apache.cxf.frontend.ServerFactoryBean;
+
+public class CXFService {
+	public String sayHello(String name){
+		return name+",ÄãºÃ";
+	}
+	public static void main(String[] args) {
+		String address="http://114.248.108.175:6666/ws";
+		ServerFactoryBean bean=new ServerFactoryBean();
+		bean.setAddress(address);
+		bean.setServiceBean(new CXFService());
+		bean.create();
+		System.out.println(address+"?WSDL");
+	}
+}
