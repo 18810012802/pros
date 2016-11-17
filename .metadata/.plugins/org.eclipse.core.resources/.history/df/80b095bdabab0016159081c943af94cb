@@ -1,12 +1,17 @@
 package cn.it.cxf;
 
-//@WebService
-/*(
+import javax.jws.WebService;
+
+import org.apache.cxf.interceptor.LoggingInInterceptor;
+import org.apache.cxf.interceptor.LoggingOutInterceptor;
+import org.apache.cxf.jaxws.JaxWsServerFactoryBean;
+@WebService
+(
 		name="CXFWebService1",
 		serviceName="CXFWebServiceService1",
 		portName="CXFWebServicePort1",
 		targetNamespace="cxf.it.cn"
-	)*/
+	)
 public class CXFService {
 	public String sayHello(String name){
 		return name+",ÄãºÃ";
@@ -17,16 +22,12 @@ public class CXFService {
 		bean.setAddress(address);
 		bean.setServiceBean(new CXFService());
 		bean.create();*/
-		/*JaxWsServerFactoryBean bean=new JaxWsServerFactoryBean();
+		JaxWsServerFactoryBean bean=new JaxWsServerFactoryBean();
 		bean.setAddress(address);
 		bean.setServiceBean(new CXFService());
 		bean.getInInterceptors().add(new LoggingInInterceptor());
 		bean.getOutFaultInterceptors().add(new LoggingOutInterceptor());
 		bean.create();
 		System.out.println(address+"?WSDL");
-		int[] a=new int[1];*/
-		int a=2 ;
-		int b=3;
-		System.out.println((a++)+(++b)+"+"+b);
 	}
 }

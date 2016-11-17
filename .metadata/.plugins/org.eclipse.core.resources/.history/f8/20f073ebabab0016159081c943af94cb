@@ -1,12 +1,12 @@
 package cn.it.cxf;
 
 //@WebService
-/*(
+(
 		name="CXFWebService1",
 		serviceName="CXFWebServiceService1",
 		portName="CXFWebServicePort1",
 		targetNamespace="cxf.it.cn"
-	)*/
+	)
 public class CXFService {
 	public String sayHello(String name){
 		return name+",ÄãºÃ";
@@ -27,6 +27,6 @@ public class CXFService {
 		int[] a=new int[1];*/
 		int a=2 ;
 		int b=3;
-		System.out.println((a++)+(++b)+"+"+b);
+		System.out.println((a++)+(++b));
 	}
 }
